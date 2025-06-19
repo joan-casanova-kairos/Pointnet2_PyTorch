@@ -1,3 +1,17 @@
+# =============================================================
+# === SECCIÓN AÑADIDA POR NOSOTROS PARA FIJAR LA COMPILACIÓN ===
+# =============================================================
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "torch>=1.4"
+]
+build-backend = "setuptools.build_meta"
+
+# =============================================================
+# === CONTENIDO ORIGINAL DEL REPOSITORIO (se mantiene igual) ===
+# =============================================================
 [tool.isort]
 skip_glob = ["*/deps/*", "*/build/*", "*/obselete/*"]
 known_third_party = ["h5py", "hydra", "lmdb", "msgpack_numpy", "numpy", "omegaconf", "pointnet2_ops", "pytest", "pytorch_lightning", "setuptools", "torch", "torchvision", "tqdm"]
@@ -11,8 +25,8 @@ use_parentheses = true
 exclude = '''
 (
   /(
-      \.eggs         # exclude a few common directories in the
-    | \.git          # root of the project
+      \.eggs          # exclude a few common directories in the
+    | \.git         # root of the project
     | \.hg
     | \.mypy_cache
     | \.tox
